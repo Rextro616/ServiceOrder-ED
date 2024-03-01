@@ -1,6 +1,6 @@
 export const config = {
     rabbitMQ: {
-        url: 'amqp://54.172.127.140',
+        url: 'amqp://44.217.49.164',
         queueName: 'initial'
     }
 } 
