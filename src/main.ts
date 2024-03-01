@@ -4,10 +4,18 @@ import express from "express";
 
 import { config } from "./config";
 import indexRouter from "./shared/infraestructure/index-router";
+import cors from "cors";
 
 function main() {
 
   const app = express();
+
+  var corsOptions = {
+    origin: 'http://127.0.0.1:3001',
+    optionsSuccessStatus: 200 // For legacy browser support
+  }
+
+  app.use(cors(corsOptions));
   app.disable("x-powered-by");
 
   app.use(express.json());
