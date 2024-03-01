@@ -11,11 +11,11 @@ function main() {
   const app = express();
 
   var corsOptions = {
-    origin: 'http://127.0.0.1:3001',
+    origin: '*',
     optionsSuccessStatus: 200 // For legacy browser support
   }
 
-  app.use(cors(corsOptions));
+  app.use(cors());
   app.disable("x-powered-by");
 
   app.use(express.json());
